@@ -1,2 +1,2 @@
 # ams-innova-inventory
-Sistema de inventario, realizado con C# (MVC)
+Inventory system, made with C# (MVC)

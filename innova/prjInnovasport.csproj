@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8012DCD5-E33F-4C5F-AA8A-3DEA75199A0D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>prjFerreteraConstru_K</RootNamespace>
+    <AssemblyName>innova</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.Instrumentation, Version=11.3.0.0, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0" />
+    <Reference Include="Dll_JMS">
+      <HintPath>..\..\..\..\..\Desktop\Dll_JMS.dll</HintPath>
+    </Reference>
+    <Reference Include="EcoRecycler.Skin">
+      <HintPath>bin\Debug\EcoRecycler.Skin.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin2">
+      <HintPath>..\..\..\..\INSTALADORES\Diseño visual\Componentes Graficos Vb2\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\estadia\proyectoMVC\Prj_Elflautista\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\..\estadia\proyectoMVC\Prj_Elflautista\bin\Debug\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\..\..\estadia\proyectoMVC\Prj_Elflautista\bin\Debug\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=1.0.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\estadia\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tools_ArthurMS">
+      <HintPath>..\..\Tools_ArthurMS\Tools_ArthurMS\bin\Debug\Tools_ArthurMS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\clsMsg.cs" />
+    <Compile Include="Controlador\Cls_Anim.cs" />
+    <Compile Include="Controlador\Cls_CEmpleados.cs" />
+    <Compile Include="Controlador\Cls_CLogin.cs" />
+    <Compile Include="Controlador\Cls_CMarcas.cs" />
+    <Compile Include="Controlador\Cls_CPerfil.cs" />
+    <Compile Include="Controlador\Cls_CPrincipal.cs" />
+    <Compile Include="Controlador\Cls_CProveedores.cs" />
+    <Compile Include="Controlador\Cls_CSplash.cs" />
+    <Compile Include="Controlador\Cls_CVentas.cs" />
+    <Compile Include="Controlador\Cls_Diseno_Config.cs" />
+    <Compile Include="Controlador\Cls_prueba.cs" />
+    <Compile Include="Controlador\Cls_Validaciones.cs" />
+    <Compile Include="Modelo\Conexion\cls_conexion.cs" />
+    <Compile Include="Modelo\DAO\Cls_EmpleadosDAO.cs" />
+    <Compile Include="Modelo\DAO\Cls_LoginDAO.cs" />
+    <Compile Include="Modelo\DAO\Cls_MarcaDAO.cs" />
+    <Compile Include="Modelo\VO\Cls_EmpleadosVO.cs" />
+    <Compile Include="Modelo\VO\Cls_LoginVO.cs" />
+    <Compile Include="Modelo\VO\Cls_MarcaVO.cs" />
+    <Compile Include="Vista\ctrlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\ctrlBase.Designer.cs">
+      <DependentUpon>ctrlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ctrlEmpleados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\ctrlEmpleados.Designer.cs">
+      <DependentUpon>ctrlEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ctrlinicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\ctrlinicio.Designer.cs">
+      <DependentUpon>ctrlinicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ctrlMarcas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\ctrlMarcas.Designer.cs">
+      <DependentUpon>ctrlMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ctrlVentas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\ctrlVentas.Designer.cs">
+      <DependentUpon>ctrlVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\frmBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmBaseForm.Designer.cs">
+      <DependentUpon>frmBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmFaceIdentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmFaceIdentification.Designer.cs">
+      <DependentUpon>frmFaceIdentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmMessage.Designer.cs">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmMsg.Designer.cs">
+      <DependentUpon>frmMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vista\ctrlBase.resx">
+      <DependentUpon>ctrlBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ctrlEmpleados.resx">
+      <DependentUpon>ctrlEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ctrlinicio.resx">
+      <DependentUpon>ctrlinicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ctrlMarcas.resx">
+      <DependentUpon>ctrlMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ctrlVentas.resx">
+      <DependentUpon>ctrlVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\frmBaseForm.resx">
+      <DependentUpon>frmBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmFaceIdentification.resx">
+      <DependentUpon>frmFaceIdentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmMessage.resx">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmMsg.resx">
+      <DependentUpon>frmMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allfons.ru-5188.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Descargar Increibles fondos abstractos HD %28223%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dq19i8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondos-de-escritorio-de-metal-la-placa-de_19-132607.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gris-fondos-de-pantalla-color-plateado-151116.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagesKBTVJZH2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\metal-plate-whit-bolts-8901591.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\metal-steel-plate-2722.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tekstura-fon-metallik-seryy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Denided.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_PDF_Acrobat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom_In.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drawer Closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgregarCompra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cobrarCuotas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lorry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mnuClientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kfm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lorry_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spreadsheet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajax-loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orig_60313.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1448545561.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f6cb98996a4e4da2ff180be829ad3bd7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\processingbar_blue_diagonal_sm_ani.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01-progress.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circular.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajax_loader_orange_300.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patientez.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\herramientas.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lar-ferreteria.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\56802-angel-fernando-gomez banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ferre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_defualt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto_default.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23204_InnovaSport.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_alarm_check_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_calendar_multiple_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_chart_gantt_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_sync_alert_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cart_plus_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cart_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_settings_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_worker_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_account_multiple_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_truck_delivery_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_file_document_grey600_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_soccer_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_view_dashboard_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_file_word_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_restore_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_folder_download_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_folder_upload_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_navigation_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_account_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_lock_grey600_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_lock_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_content_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_floppy_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_pencil_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_navigation_cancel1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
